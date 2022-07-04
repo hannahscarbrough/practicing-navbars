@@ -20,7 +20,8 @@ body {
 
 .logo {
     float: left;
-    height: 8em;
+    height: 10em;
+    width: 10em;
 }
 
 nav {
@@ -36,4 +37,28 @@ nav ul {
 nav li {
     display: inline-block;
     margin-left: 35px;
+    padding-top: 80px;
+    position: relative;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: arial;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
